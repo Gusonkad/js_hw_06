@@ -57,3 +57,11 @@ console.table(getUsersWithAge(users, 30, 40));
 const calculateTotalBalance = users => users.reduce((acc, user) => acc + user.balance, 0);
 console.table(calculateTotalBalance(users)); // 20916
 
+
+// ===================================
+// task_08.js
+// Массив имен всех пользователей у которых есть друг с указанным именем.
+const getUsersWithFriend = (users, friendName) => users.filter(user => user["friends"].includes(friendName)).map(user => user.name);
+console.table(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
+console.table(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
+
