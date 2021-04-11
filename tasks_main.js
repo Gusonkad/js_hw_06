@@ -75,3 +75,21 @@ const getNamesSortedByFriendsCount = users => {
 };
 console.log(getNamesSortedByFriendsCount(users));
 // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head','Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
+
+
+// ===================================
+// task_10.js
+// Получить массив всех умений всех пользователей (поле skills), при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
+
+// Вариант через Set 
+// const getSortedUniqueSkills = users => {
+//    let skillsNotUnique = users
+//    .reduce((acc, {skills}) => [...acc, ...skills], []);
+//    skillsNotUnique = skillsNotUnique.sort();
+//    return [...new Set(skillsNotUnique)];
+// };
+// console.log(getSortedUniqueSkills(users));
+
+const getSortedUniqueSkills = users =>  users.reduce((allSkills,{skills}) => [...allSkills,...skills],[]).filter((skill,idx,allSkills) => allSkills.indexOf(skill) === idx).sort(); 
+console.log(getSortedUniqueSkills(users));
+// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
