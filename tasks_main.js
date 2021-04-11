@@ -6,12 +6,12 @@ const getUserNames = users => users.map(user => user.name);
  console.table(getUserNames(users));
  // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 // ===================================
+
+
 // task_02.js
 // Получить массив объектов пользователей по цвету глаз (поле eyeColor).
-
-
 const getUsersWithEyeColor = (users, color) => users.filter(user => user.eyeColor === color);
-console.table(getUsersWithEyeColor(users, 'blue')); 
+console.log(getUsersWithEyeColor(users, 'blue')); 
  // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
 
 
@@ -25,3 +25,7 @@ console.table(getUsersWithEyeColor(users, 'blue'));
 
 // ===================================
 // task_04.js 
+// Получить массив только неактивных пользователей (поле isActive).
+const getInactiveUsers = users => users.filter (user => user.isActive);
+console.log(getInactiveUsers(users)); 
+// [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson] 
