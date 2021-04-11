@@ -29,3 +29,13 @@ console.log(getUsersWithEyeColor(users, 'blue'));
 const getInactiveUsers = users => users.filter (user => user.isActive);
 console.log(getInactiveUsers(users)); 
 // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson] 
+
+
+// ===================================
+// task_05.js 
+// Получить пользоваля (не массив) по email (поле email, он уникальный).
+const getUserWithEmail = (users, email) => users.find(user => user.email === email);
+console.table(getUserWithEmail(users, 'shereeanthony@kog.com')); 
+// {объект пользователя Sheree Anthony}
+console.table(getUserWithEmail(users, 'elmahead@omatom.com')); 
+// {объект пользователя Elma Head}
