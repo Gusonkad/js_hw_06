@@ -39,3 +39,21 @@ console.table(getUserWithEmail(users, 'shereeanthony@kog.com'));
 // {объект пользователя Sheree Anthony}
 console.table(getUserWithEmail(users, 'elmahead@omatom.com')); 
 // {объект пользователя Elma Head}
+
+
+// ===================================
+// task_06.js 
+// Получить массив пользователей попадающих в возрастную категорию от min до max лет (поле age).
+const getUsersWithAge = (users, min, max) => users.filter(user => user.age >= min && user.age <= max);
+console.table(getUsersWithAge(users, 20, 30)); 
+// [объект Ross Vazquez, объект Elma Head, объект Carey Barr]
+console.table(getUsersWithAge(users, 30, 40));
+// [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
+
+
+// ===================================
+// task_07.js
+// Получить общую сумму баланса (поле balance) всех пользователей.
+const calculateTotalBalance = users => users.reduce((acc, user) => acc + user.balance, 0);
+console.table(calculateTotalBalance(users)); // 20916
+
